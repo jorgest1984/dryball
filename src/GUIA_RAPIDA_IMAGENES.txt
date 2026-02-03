@@ -1,0 +1,221 @@
+═══════════════════════════════════════════════════════════════════
+  GUÍA RÁPIDA - SISTEMA DE IMÁGENES IMPLEMENTADO
+  Dark Realm RPG - Pixel Art
+═══════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────┐
+│ ESTRUCTURA DE CARPETAS CREADA                                  │
+└─────────────────────────────────────────────────────────────────┘
+
+/assets/
+  ├── events/          → 30 imágenes de eventos (256x256px)
+  ├── combat/          → 3 botones de combate (80x80px)
+  ├── inventory/       → 10 objetos de inventario (64x64px)
+  ├── exploration/     → 2 imágenes laterales (128x128px)
+  └── enemies/         → Sprites de enemigos (opcional)
+
+┌─────────────────────────────────────────────────────────────────┐
+│ ARCHIVOS DE REFERENCIA                                         │
+└─────────────────────────────────────────────────────────────────┘
+
+📄 NOMBRES_ARCHIVOS_SPRITES.txt
+   → Lista completa de todos los nombres de archivo .png necesarios
+   → Organizados por carpeta y categoría
+   → Incluye correspondencia con IDs del juego
+
+📄 LISTA_IMAGENES_NECESARIAS.md
+   → Especificaciones técnicas de cada imagen
+   → Descripciones detalladas de cada evento
+   → Textos exactos de diálogos y botones
+   → Paleta de colores y estilo visual
+
+📄 GUIA_RAPIDA_IMAGENES.txt (este archivo)
+   → Resumen rápido del sistema implementado
+   → Instrucciones de uso
+
+┌─────────────────────────────────────────────────────────────────┐
+│ COMPONENTES ACTUALIZADOS                                       │
+└─────────────────────────────────────────────────────────────────┘
+
+✅ DecisionScreen.tsx
+   - Usa imágenes de /assets/events/
+   - Mapea ID de evento a nombre de archivo
+   - Renderizado con pixelated para mantener estilo
+
+✅ CombatScreen.tsx
+   - Usa imágenes de /assets/combat/
+   - 3 botones: attack, item, magic
+   - Fallback automático si falta imagen
+
+✅ InventoryPanel.tsx
+   - Usa imágenes de /assets/inventory/
+   - Mapea nombre de item a archivo
+   - Muestra nombre y stats del item
+
+┌─────────────────────────────────────────────────────────────────┐
+│ CÓMO AGREGAR IMÁGENES                                          │
+└─────────────────────────────────────────────────────────────────┘
+
+1. CREA O DESCARGA tus sprites en formato PNG con transparencia
+
+2. RENOMBRA los archivos según NOMBRES_ARCHIVOS_SPRITES.txt
+   Ejemplo: event-01-altar.png, item-pocion-vida.png, etc.
+
+3. COLOCA los archivos en su carpeta correspondiente:
+   /assets/events/      → Eventos de decisión
+   /assets/combat/      → Botones de combate
+   /assets/inventory/   → Objetos del inventario
+   /assets/exploration/ → Imágenes laterales
+
+4. VERIFICA que los nombres sean exactos (sensible a mayúsculas)
+
+5. ACTUALIZA el juego y las imágenes se cargarán automáticamente
+
+┌─────────────────────────────────────────────────────────────────┐
+│ PRIORIDADES DE CREACIÓN                                        │
+└─────────────────────────────────────────────────────────────────┘
+
+🔴 ALTA PRIORIDAD (Para gameplay funcional):
+   - 3 botones de combate
+   - 7 objetos básicos de inventario
+   - 10 eventos de decisión más comunes (IDs 1-10)
+
+🟡 MEDIA PRIORIDAD:
+   - Resto de eventos de decisión (IDs 11-30)
+   - 2 imágenes laterales de exploración
+
+🟢 BAJA PRIORIDAD (Mejoras visuales):
+   - Sprites de enemigos
+   - Efectos visuales adicionales
+
+┌─────────────────────────────────────────────────────────────────┐
+│ ESPECIFICACIONES TÉCNICAS                                      │
+└─────────────────────────────────────────────────────────────────┘
+
+FORMATO:    PNG con transparencia (alpha channel)
+ESTILO:     Pixel art 16-bit o 32-bit
+PALETA:     Tonos oscuros (ver LISTA_IMAGENES_NECESARIAS.md)
+RENDER:     imageRendering: 'pixelated' (sin suavizado)
+
+TAMAÑOS:
+  - Eventos de decisión:  256x256px
+  - Eventos laterales:    128x128px
+  - Botones de combate:   80x80px
+  - Objetos inventario:   64x64px
+
+┌─────────────────────────────────────────────────────────────────┐
+│ SISTEMA DE FALLBACK                                            │
+└─────────────────────────────────────────────────────────────────┘
+
+El juego usa el componente ImageWithFallback que:
+✓ Intenta cargar la imagen especificada
+✓ Si falla, muestra un placeholder visual
+✓ No rompe el juego si faltan imágenes
+✓ Mantiene el diseño y la jugabilidad
+
+Esto significa que puedes:
+• Añadir imágenes gradualmente
+• Probar el juego con imágenes parciales
+• Reemplazar placeholders uno por uno
+
+┌─────────────────────────────────────────────────────────────────┐
+│ EJEMPLOS DE USO                                                │
+└─────────────────────────────────────────────────────────────────┘
+
+EVENTO DE DECISIÓN:
+  Archivo: /assets/events/event-01-altar.png
+  Se muestra cuando: ID de evento = 1 (Altar Oscuro)
+  
+OBJETO DE INVENTARIO:
+  Archivo: /assets/inventory/item-pocion-vida.png
+  Se muestra cuando: Item.name === "Poción de vida"
+  
+BOTÓN DE COMBATE:
+  Archivo: /assets/combat/button-attack.png
+  Se muestra en: Pantalla de combate, botón izquierdo
+
+┌─────────────────────────────────────────────────────────────────┐
+│ MAPEO EVENTOS → ARCHIVOS                                       │
+└─────────────────────────────────────────────────────────────────┘
+
+Los eventos se mapean automáticamente por ID:
+  Evento ID 1  → event-01-altar.png
+  Evento ID 2  → event-02-mirror.png
+  Evento ID 3  → event-03-potion.png
+  ... (ver NOMBRES_ARCHIVOS_SPRITES.txt para lista completa)
+
+┌─────────────────────────────────────────────────────────────────┐
+│ MAPEO ITEMS → ARCHIVOS                                         │
+└─────────────────────────────────────────────────────────────────┘
+
+Los items se mapean por nombre exacto:
+  "Poción de vida"     → item-pocion-vida.png
+  "Poción Superior"    → item-pocion-superior.png
+  "Llave Antigua"      → item-llave-antigua.png
+  ... (ver NOMBRES_ARCHIVOS_SPRITES.txt para lista completa)
+
+┌─────────────────────────────────────────────────────────────────┐
+│ CONSEJOS DE DISEÑO                                             │
+└─────────────────────────────────────────────────────────────────┘
+
+1. CONSISTENCIA: Mantén el mismo estilo pixel art en todas las imágenes
+2. CONTRASTE: Usa alto contraste para visibilidad en fondos oscuros
+3. CLARIDAD: Los iconos deben ser reconocibles incluso pequeños
+4. PALETA: Sigue los colores sugeridos para mantener cohesión visual
+5. DETALLES: No te excedas en detalles, el pixel art debe ser legible
+
+┌─────────────────────────────────────────────────────────────────┐
+│ HERRAMIENTAS RECOMENDADAS                                      │
+└─────────────────────────────────────────────────────────────────┘
+
+Para crear pixel art:
+  • Aseprite (pago, muy completo)
+  • Piskel (gratis, web)
+  • GIMP (gratis, multi-propósito)
+  • Pixilart (gratis, web)
+  • GraphicsGale (gratis)
+
+Para generar con IA:
+  • DALL-E / Midjourney con prompt "pixel art"
+  • Stable Diffusion con modelos especializados en pixel art
+  • Añadir "8-bit", "16-bit", "retro game" a los prompts
+
+┌─────────────────────────────────────────────────────────────────┐
+│ SOLUCIÓN DE PROBLEMAS                                          │
+└─────────────────────────────────────────────────────────────────┘
+
+❌ La imagen no aparece:
+   → Verifica que el nombre del archivo sea EXACTO
+   → Verifica que esté en la carpeta correcta
+   → Verifica que sea formato PNG
+   → Revisa la consola del navegador para errores
+
+❌ La imagen se ve borrosa:
+   → Asegúrate de que sea pixel art real, no redimensionado
+   → El sistema usa imageRendering: 'pixelated'
+   → Crea la imagen en el tamaño exacto especificado
+
+❌ La imagen tiene fondo blanco:
+   → Usa PNG con canal alpha (transparencia)
+   → Exporta con fondo transparente desde tu editor
+
+┌─────────────────────────────────────────────────────────────────┐
+│ PRÓXIMOS PASOS                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+1. ✅ Estructura de carpetas creada
+2. ✅ Sistema de carga de imágenes implementado
+3. ✅ Componentes actualizados para usar imágenes
+4. ✅ Documentación completa generada
+5. ⏳ PENDIENTE: Crear/colocar las imágenes PNG
+
+Para comenzar:
+  → Abre NOMBRES_ARCHIVOS_SPRITES.txt
+  → Empieza por los archivos de ALTA PRIORIDAD
+  → Crea las 3 imágenes de botones de combate primero
+  → Luego los 7 objetos básicos del inventario
+  → Finalmente los eventos de decisión
+
+═══════════════════════════════════════════════════════════════════
+  ¡El sistema está listo para recibir tus sprites!
+═══════════════════════════════════════════════════════════════════

@@ -1,0 +1,214 @@
+═══════════════════════════════════════════════════════════════════
+  NOMBRES DE ARCHIVOS SPRITES - DARK REALM RPG
+  Todos los archivos deben estar en formato PNG con transparencia
+═══════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────┐
+│ 1. EVENTOS DE DECISIÓN - /assets/events/                       │
+│    Tamaño: 256x256px                                            │
+└─────────────────────────────────────────────────────────────────┘
+
+EVENTOS MÍSTICOS (IDs 1-10):
+  event-01-altar-oscuro.png
+  event-02-espejo-distorsionado.png
+  event-03-pocion-burbujeante.png
+  event-04-voces-oscuridad.png
+  event-05-libro-antiguo.png
+  event-06-estatua-llorosa.png
+  event-07-cofre-encadenado.png
+  event-08-vela-negra.png
+  event-09-craneo-mistico.png
+  event-10-circulo-runas.png
+
+EVENTOS DE OBJETOS (IDs 11-16):
+  event-11-llave-antigua.png
+  event-12-puerta-cerrada.png
+  event-13-antorcha-sagrada.png
+  event-14-criatura-sombras.png
+  event-15-amuleto-brillante.png
+  event-16-portal-demoniaco.png
+
+EVENTOS AMBIENTALES (IDs 17-20):
+  event-17-cristal-energia.png
+  event-18-pozo-oscuro.png
+  event-19-campana-gigante.png
+  event-20-gema-alma.png
+
+EVENTOS DE TIENDA (IDs 21-25):
+  event-21-tendero-pocion-superior.png
+  event-22-tendero-elixir-arcano.png
+  event-23-tendero-pocion-sangre.png
+  event-24-tendero-frasco-etereo.png
+  event-25-tendero-tonico-prohibido.png
+
+EVENTOS DE CONTINUAR (IDs 26-30):
+  event-26-caminos-divididos.png
+  event-27-encrucijada.png
+  event-28-corredor-interminable.png
+  event-29-pasillo-ecos.png
+  event-30-antorchas-parpadeantes.png
+
+┌─────────────────────────────────────────────────────────────────┐
+│ 2. PANTALLA DE EXPLORACIÓN - /assets/exploration/              │
+│    Tamaño: 128x128px                                            │
+└─────────────────────────────────────────────────────────────────┘
+
+  event-side-left.png      → Placeholder izquierdo (rota entre eventos)
+  event-side-right.png     → Placeholder derecho (rota entre eventos)
+
+┌─────────────────────────────────────────────────────────────────┐
+│ 3. BOTONES DE COMBATE - /assets/combat/                        │
+│    Tamaño: 80x80px                                              │
+└─────────────────────────────────────────────────────────────────┘
+
+  button-attack.png        → Icono de espada/puño (rojo/gris)
+  button-item.png          → Icono de mochila/poción (verde/marrón)
+  button-magic.png         → Icono de báculo/runas (morado/azul)
+
+┌─────────────────────────────────────────────────────────────────┐
+│ 4. OBJETOS DE INVENTARIO - /assets/inventory/                  │
+│    Tamaño: 64x64px                                              │
+└─────────────────────────────────────────────────────────────────┘
+
+TIPO POCIÓN (HP):
+  item-pocion-vida.png           → Frasco rojo pequeño (30 HP)
+  item-pocion-superior.png       → Frasco rojo grande (60 HP)
+  item-pocion-sangre.png         → Frasco rojo oscuro (50 HP)
+  item-tonico-prohibido.png      → Frasco rojo con símbolos (70 HP)
+
+TIPO MANÁ (MP):
+  item-pocion-mana.png           → Frasco azul pequeño (20 MP)
+  item-elixir-arcano.png         → Frasco azul brillante (50 MP)
+  item-frasco-etereo.png         → Frasco azul translúcido (40 MP)
+
+TIPO KEY (Objetos especiales):
+  item-llave-antigua.png         → Llave dorada ornamentada
+  item-antorcha-sagrada.png      → Antorcha con llama
+  item-amuleto-protector.png     → Amuleto con gema
+
+┌─────────────────────────────────────────────────────────────────┐
+│ 5. ENEMIGOS (OPCIONAL) - /assets/enemies/                      │
+│    Tamaño sugerido: 128x128px o 256x256px                      │
+└─────────────────────────────────────────────────────────────────┘
+
+  enemy-skeleton.png             → Esqueleto (40 HP)
+  enemy-demon.png                → Demonio Menor (60 HP)
+  enemy-wraith.png               → Espectro (50 HP)
+  enemy-lich.png                 → Lich (avanzado)
+  enemy-golem.png                → Gólem (avanzado)
+  enemy-werewolf.png             → Hombre Lobo (avanzado)
+  enemy-cultist.png              → Cultista (avanzado)
+  enemy-boss-shadow-lord.png     → Señor de las Tinieblas (350 HP)
+
+┌─────────────────────────────────────────────────────────────────┐
+│ 6. EFECTOS DE ESTADO (OPCIONAL) - /assets/effects/             │
+│    Tamaño sugerido: 64x64px                                     │
+└─────────────────────────────────────────────────────────────────┘
+
+  state-enlightened.png          → Aura dorada (Iluminado)
+  state-mad.png                  → Aura roja caótica (Loco)
+  state-normal.png               → Sin efecto (Normal)
+
+═══════════════════════════════════════════════════════════════════
+  RESUMEN DE ARCHIVOS NECESARIOS
+═══════════════════════════════════════════════════════════════════
+
+PRIORIDAD ALTA (Esenciales):
+  - 30 eventos de decisión     → /assets/events/
+  - 3 botones de combate       → /assets/combat/
+  - 10 objetos de inventario   → /assets/inventory/
+  - 2 eventos laterales        → /assets/exploration/
+  
+  TOTAL: 45 imágenes
+
+PRIORIDAD MEDIA-BAJA (Opcionales):
+  - 8 sprites de enemigos      → /assets/enemies/
+  - 3 efectos de estado        → /assets/effects/
+  
+  TOTAL: 11 imágenes
+
+═══════════════════════════════════════════════════════════════════
+  CONVENCIONES DE NOMBRES
+═══════════════════════════════════════════════════════════════════
+
+1. Todos los nombres en minúsculas
+2. Palabras separadas por guiones (-)
+3. Prefijos claros según tipo:
+   - event-XX-       para eventos
+   - button-         para botones
+   - item-           para objetos de inventario
+   - enemy-          para enemigos
+   - state-          para estados
+
+4. Formato: PNG con transparencia
+5. Sin espacios ni caracteres especiales
+6. Números con dos dígitos (01, 02, 03...)
+
+═══════════════════════════════════════════════════════════════════
+  CORRESPONDENCIA CON IDS DEL JUEGO
+═══════════════════════════════════════════════════════════════════
+
+EVENTOS DE DECISIÓN:
+  ID 1  → event-01-altar-oscuro.png
+  ID 2  → event-02-espejo-distorsionado.png
+  ID 3  → event-03-pocion-burbujeante.png
+  ID 4  → event-04-voces-oscuridad.png
+  ID 5  → event-05-libro-antiguo.png
+  ID 6  → event-06-estatua-llorosa.png
+  ID 7  → event-07-cofre-encadenado.png
+  ID 8  → event-08-vela-negra.png
+  ID 9  → event-09-craneo-mistico.png
+  ID 10 → event-10-circulo-runas.png
+  ID 11 → event-11-llave-antigua.png
+  ID 12 → event-12-puerta-cerrada.png
+  ID 13 → event-13-antorcha-sagrada.png
+  ID 14 → event-14-criatura-sombras.png
+  ID 15 → event-15-amuleto-brillante.png
+  ID 16 → event-16-portal-demoniaco.png
+  ID 17 → event-17-cristal-energia.png
+  ID 18 → event-18-pozo-oscuro.png
+  ID 19 → event-19-campana-gigante.png
+  ID 20 → event-20-gema-alma.png
+  ID 21 → event-21-tendero-pocion-superior.png
+  ID 22 → event-22-tendero-elixir-arcano.png
+  ID 23 → event-23-tendero-pocion-sangre.png
+  ID 24 → event-24-tendero-frasco-etereo.png
+  ID 25 → event-25-tendero-tonico-prohibido.png
+  ID 26 → event-26-caminos-divididos.png
+  ID 27 → event-27-encrucijada.png
+  ID 28 → event-28-corredor-interminable.png
+  ID 29 → event-29-pasillo-ecos.png
+  ID 30 → event-30-antorchas-parpadeantes.png
+
+OBJETOS DE INVENTARIO (por nombre):
+  "Poción de vida"       → item-pocion-vida.png
+  "Poción Superior"      → item-pocion-superior.png
+  "Poción de Sangre"     → item-pocion-sangre.png
+  "Tónico Prohibido"     → item-tonico-prohibido.png
+  "Poción de maná"       → item-pocion-mana.png
+  "Elixir Arcano"        → item-elixir-arcano.png
+  "Frasco Etéreo"        → item-frasco-etereo.png
+  "Llave Antigua"        → item-llave-antigua.png
+  "Antorcha Sagrada"     → item-antorcha-sagrada.png
+  "Amuleto Protector"    → item-amuleto-protector.png
+
+ENEMIGOS (por nombre):
+  "Esqueleto"            → enemy-skeleton.png
+  "Demonio Menor"        → enemy-demon.png
+  "Espectro"             → enemy-wraith.png
+  "Señor de las Tinieblas" → enemy-boss-shadow-lord.png
+
+═══════════════════════════════════════════════════════════════════
+  INSTRUCCIONES DE USO
+═══════════════════════════════════════════════════════════════════
+
+1. Crea/coloca cada sprite PNG con el nombre exacto especificado
+2. Respeta el tamaño indicado para cada tipo de imagen
+3. Usa transparencia en formato PNG (no JPG)
+4. Mantén el estilo pixel art consistente
+5. Sigue la paleta de colores oscuros del juego
+
+Una vez colocadas las imágenes en sus carpetas correspondientes,
+el juego las cargará automáticamente usando estas rutas.
+
+═══════════════════════════════════════════════════════════════════

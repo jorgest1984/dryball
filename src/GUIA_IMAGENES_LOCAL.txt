@@ -1,0 +1,367 @@
+═══════════════════════════════════════════════════════════════════════════════
+  GUÍA: CÓMO AGREGAR IMÁGENES AL PROYECTO (RUTAS LOCALES)
+═══════════════════════════════════════════════════════════════════════════════
+
+Esta guía te explica cómo agregar tus sprites de pixel art al proyecto usando
+carpetas locales en tu computadora.
+
+═══════════════════════════════════════════════════════════════════════════════
+  📍 ESTRUCTURA DE CARPETAS DEL PROYECTO
+═══════════════════════════════════════════════════════════════════════════════
+
+Debes crear la siguiente estructura de carpetas dentro de tu proyecto:
+
+📁 Tu Proyecto/
+  └─ 📁 public/
+       └─ 📁 assets/
+            ├─ 📁 combat/        (Botones de combate)
+            ├─ 📁 enemies/       (Sprites de enemigos)
+            ├─ 📁 events/        (Eventos de decisión)
+            ├─ 📁 exploration/   (Fondos, botones, pistas)
+            ├─ 📁 inventory/     (Objetos del inventario)
+            └─ 📁 ui/            (Logo, estados de locura)
+
+═══════════════════════════════════════════════════════════════════════════════
+  🚀 PASOS PARA AGREGAR TUS IMÁGENES
+═══════════════════════════════════════════════════════════════════════════════
+
+PASO 1: Crear la carpeta /public/assets/
+────────────────────────────────────────────────────────────────────────────
+   a) Ve a la raíz de tu proyecto (donde está el package.json)
+   b) Si no existe, crea la carpeta "public"
+   c) Dentro de "public", crea la carpeta "assets"
+
+PASO 2: Crear las subcarpetas
+────────────────────────────────────────────────────────────────────────────
+   Dentro de /public/assets/, crea estas 6 carpetas:
+   
+   ✓ combat
+   ✓ enemies
+   ✓ events
+   ✓ exploration
+   ✓ inventory
+   ✓ ui
+
+PASO 3: Copiar tus imágenes a las carpetas correspondientes
+────────────────────────────────────────────────────────────────────────────
+   Copia tus archivos PNG siguiendo la tabla de nombres exactos que está
+   más abajo en este documento.
+
+PASO 4: Verificar
+────────────────────────────────────────────────────────────────────────────
+   • Asegúrate de que los nombres de archivo sean EXACTOS (incluye guiones)
+   • Todas las extensiones deben ser .png (minúsculas)
+   • No uses espacios ni caracteres especiales en los nombres
+
+═══════════════════════════════════════════════════════════════════════════════
+  📋 LISTA COMPLETA DE IMÁGENES Y NOMBRES DE ARCHIVO
+═══════════════════════════════════════════════════════════════════════════════
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+A. CARPETA: /public/assets/ui/ (4 ARCHIVOS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. title-logo.png
+   - Tamaño: 800x200px (horizontal)
+   - Uso: Logo del título en pantalla inicial
+   - Tiene animación de pulso
+
+2. state-normal.png
+   - Tamaño: 64x64px
+   - Uso: Estado normal del jugador
+
+3. state-enlightened.png
+   - Tamaño: 64x64px
+   - Uso: Estado "Iluminado" (5% probabilidad a 100 locura)
+
+4. state-mad.png
+   - Tamaño: 64x64px
+   - Uso: Estado "Loco" (95% probabilidad a 100 locura)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+B. CARPETA: /public/assets/exploration/ (9 ARCHIVOS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FONDOS Y BOTONES:
+
+5. hallway-background.png
+   - Tamaño: 1200x800px (ratio 3:2)
+   - Uso: Fondo del pasillo en exploración
+
+6. button-left.png
+   - Tamaño: 400x300px
+   - Uso: Botón para ir a la izquierda
+
+7. button-inventory.png
+   - Tamaño: 400x300px
+   - Uso: Botón para abrir inventario
+
+8. button-right.png
+   - Tamaño: 400x300px
+   - Uso: Botón para ir a la derecha
+
+PISTAS VISUALES (HINTS):
+
+9. hint-ambiental.png
+   - Tamaño: 128x128px
+   - Uso: Indica evento ambiental (cristales, pozos, campanas)
+
+10. hint-combate.png
+    - Tamaño: 128x128px
+    - Uso: Indica encuentro de combate
+
+11. hint-tienda.png
+    - Tamaño: 128x128px
+    - Uso: Indica encuentro con tendero misterioso
+
+12. hint-objeto.png
+    - Tamaño: 128x128px
+    - Uso: Indica evento con objetos especiales
+
+13. hint-mistico.png
+    - Tamaño: 128x128px
+    - Uso: Indica evento místico/mágico
+
+LADOS DE PASILLO:
+
+14. event-side-left.png
+    - Tamaño: 128x128px
+    - Uso: Placeholder lado izquierdo (opcional)
+
+15. event-side-right.png
+    - Tamaño: 128x128px
+    - Uso: Placeholder lado derecho (opcional)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+C. CARPETA: /public/assets/combat/ (3 ARCHIVOS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+16. button-attack.png
+    - Tamaño: 80x80px
+    - Uso: Botón de ataque físico en combate
+
+17. button-magic.png
+    - Tamaño: 80x80px
+    - Uso: Botón de ataque mágico en combate
+
+18. button-item.png
+    - Tamaño: 80x80px
+    - Uso: Botón para usar objetos en combate
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+D. CARPETA: /public/assets/enemies/ (4 ARCHIVOS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+19. enemy-skeleton.png
+    - Tamaño: 256x256px
+    - Uso: Sprite del enemigo Esqueleto
+
+20. enemy-demon.png
+    - Tamaño: 256x256px
+    - Uso: Sprite del enemigo Demonio
+
+21. enemy-wraith.png
+    - Tamaño: 256x256px
+    - Uso: Sprite del enemigo Espectro
+
+22. enemy-boss.png
+    - Tamaño: 256x256px
+    - Uso: Sprite del Boss (Señor de las Tinieblas)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+E. CARPETA: /public/assets/inventory/ (3 ARCHIVOS BASE + VARIANTES)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NOTA: Actualmente el código usa solo 3 nombres base, pero puedes expandir
+      el sistema para incluir todas las variantes de pociones.
+
+23. item-pocion-vida.png
+    - Tamaño: 64x64px
+    - Uso: Poción de vida (restaura HP)
+
+24. item-pocion-mana.png
+    - Tamaño: 64x64px
+    - Uso: Poción de maná (restaura MP)
+
+25. item-llave-oxidada.png
+    - Tamaño: 64x64px
+    - Uso: Llave oxidada (objeto especial)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+F. CARPETA: /public/assets/events/ (30 ARCHIVOS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EVENTOS MÍSTICOS (IDs 1-10):
+
+26. event-01-altar-oscuro.png (256x256px)
+27. event-02-espejo-distorsionado.png (256x256px)
+28. event-03-pocion-burbujeante.png (256x256px)
+29. event-04-voces-oscuridad.png (256x256px)
+30. event-05-libro-antiguo.png (256x256px)
+31. event-06-estatua-llorosa.png (256x256px)
+32. event-07-cofre-encadenado.png (256x256px)
+33. event-08-vela-negra.png (256x256px)
+34. event-09-craneo-mistico.png (256x256px)
+35. event-10-puerta-susurrante.png (256x256px)
+
+EVENTOS DE OBJETOS (IDs 11-16):
+
+36. event-11-charco-sangre.png (256x256px)
+37. event-12-cadenas-rotas.png (256x256px)
+38. event-13-cueva-misteriosa.png (256x256px)
+39. event-14-runas-brillantes.png (256x256px)
+40. event-15-campamento-abandonado.png (256x256px)
+41. event-16-arbol-retorcido.png (256x256px)
+
+EVENTOS AMBIENTALES (IDs 17-20):
+
+42. event-17-pozo-oscuro.png (256x256px)
+43. event-18-mercader-sombrio.png (256x256px)
+44. event-19-teletransportador.png (256x256px)
+45. event-20-portal-dimensional.png (256x256px)
+
+EVENTOS DE TIENDA (IDs 21-25):
+
+46. event-21-ritual-interrumpido.png (256x256px)
+47. event-22-cristal-resonante.png (256x256px)
+48. event-23-guardian-dormido.png (256x256px)
+49. event-24-biblioteca-maldita.png (256x256px)
+50. event-25-fuente-vida.png (256x256px)
+
+EVENTOS DE CONTINUAR (IDs 26-30):
+
+51. event-26-reloj-detenido.png (256x256px)
+52. event-27-mariposa-sombria.png (256x256px)
+53. event-28-espada-clavada.png (256x256px)
+54. event-29-mascara-antigua.png (256x256px)
+55. event-30-umbral-pesadillas.png (256x256px)
+
+═══════════════════════════════════════════════════════════════════════════════
+  📂 RESUMEN DE ARCHIVOS POR CARPETA
+═══════════════════════════════════════════════════════════════════════════════
+
+/public/assets/ui/            →   4 archivos
+/public/assets/exploration/   →  11 archivos
+/public/assets/combat/        →   3 archivos
+/public/assets/enemies/       →   4 archivos
+/public/assets/inventory/     →   3 archivos (mínimo)
+/public/assets/events/        →  30 archivos
+                                 ──────────────
+                    TOTAL:       55 archivos
+
+═══════════════════════════════════════════════════════════════════════════════
+  ⚙️ DÓNDE ESTÁN CONFIGURADAS LAS RUTAS
+═══════════════════════════════════════════════════════════════════════════════
+
+Todas las rutas están centralizadas en el archivo:
+
+📁 /data/sprites.ts
+
+Este archivo define todas las constantes de rutas que usan los componentes.
+Si cambias el nombre de alguna imagen, edita este archivo.
+
+═══════════════════════════════════════════════════════════════════════════════
+  ⚠️ NOTAS IMPORTANTES
+═══════════════════════════════════════════════════════════════════════════════
+
+1. NOMBRES EXACTOS:
+   Los nombres de archivo deben ser EXACTAMENTE como se indican.
+   Incluye guiones (-) y extensión .png en minúsculas.
+
+2. CARPETA /public/:
+   Es crucial que las imágenes estén en /public/assets/ y no en /src/assets/
+   porque Vite las sirve directamente desde /public/
+
+3. FORMATO:
+   Se recomienda PNG con transparencia donde sea necesario.
+
+4. MAYÚSCULAS/MINÚSCULAS:
+   Todos los nombres de archivo son en minúsculas con guiones.
+
+5. RECARGA DEL NAVEGADOR:
+   Si las imágenes no aparecen, recarga el navegador con:
+   • Ctrl + Shift + R (Windows/Linux)
+   • Cmd + Shift + R (Mac)
+
+6. FALLBACK:
+   Si una imagen no existe, el componente ImageWithFallback mostrará
+   un placeholder gris automáticamente.
+
+═══════════════════════════════════════════════════════════════════════════════
+  🎨 ESPECIFICACIONES TÉCNICAS
+═══════════════════════════════════════════════════════════════════════════════
+
+FORMATO: PNG con transparencia
+ESTILO: Pixel art de fantasía oscura
+PALETA: Tonos oscuros (negro, gris, rojo, morado, azul)
+
+TAMAÑOS RECOMENDADOS:
+  • Logo del título:        800x200px (horizontal)
+  • Eventos de decisión:    256x256px
+  • Sprites de enemigos:    256x256px
+  • Fondo de pasillo:       1200x800px (3:2)
+  • Botones de exploración: 400x300px
+  • Pistas visuales:        128x128px
+  • Botones de combate:     80x80px
+  • Objetos de inventario:  64x64px
+  • Estados de locura:      64x64px
+
+═══════════════════════════════════════════════════════════════════════════════
+  ✨ EJEMPLO DE ESTRUCTURA FINAL
+═══════════════════════════════════════════════════════════════════════════════
+
+Tu Proyecto/
+├─ public/
+│  └─ assets/
+│     ├─ combat/
+│     │  ├─ button-attack.png
+│     │  ├─ button-magic.png
+│     │  └─ button-item.png
+│     ├─ enemies/
+│     │  ├─ enemy-skeleton.png
+│     │  ├─ enemy-demon.png
+│     │  ├─ enemy-wraith.png
+│     │  └─ enemy-boss.png
+│     ├─ events/
+│     │  ├─ event-01-altar-oscuro.png
+│     │  ├─ event-02-espejo-distorsionado.png
+│     │  └─ ... (30 archivos en total)
+│     ├─ exploration/
+│     │  ├─ hallway-background.png
+│     │  ├─ button-left.png
+│     │  ├─ button-inventory.png
+│     │  ├─ button-right.png
+│     │  ├─ hint-ambiental.png
+│     │  ├─ hint-combate.png
+│     │  ├─ hint-tienda.png
+│     │  ├─ hint-objeto.png
+│     │  ├─ hint-mistico.png
+│     │  ├─ event-side-left.png
+│     │  └─ event-side-right.png
+│     ├─ inventory/
+│     │  ├─ item-pocion-vida.png
+│     │  ├─ item-pocion-mana.png
+│     │  └─ item-llave-oxidada.png
+│     └─ ui/
+│        ├─ title-logo.png
+│        ├─ state-normal.png
+│        ├─ state-enlightened.png
+│        └─ state-mad.png
+├─ src/
+├─ package.json
+└─ ...
+
+═══════════════════════════════════════════════════════════════════════════════
+  🔥 ¡LISTO!
+═══════════════════════════════════════════════════════════════════════════════
+
+Una vez que copies tus imágenes PNG en las carpetas correspondientes con los
+nombres exactos, el juego las cargará automáticamente.
+
+Si tienes problemas:
+  ✓ Verifica que los nombres sean exactos (incluye guiones y .png)
+  ✓ Asegúrate de que estén en /public/assets/ (no en /src/)
+  ✓ Recarga el navegador con Ctrl+Shift+R o Cmd+Shift+R
+  ✓ Revisa la consola del navegador por errores de carga
+
+═══════════════════════════════════════════════════════════════════════════════
